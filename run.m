@@ -8,7 +8,7 @@ i= 1;
  
 DataName{i} = 'BBCSport'; i = i + 1;
 %DataName{i} = 'BBC'; i = i + 1;
-% DataName{i} = 'Caltech101-20' ; i = i + 1;
+%DataName{i} = 'Caltech101-20' ; i = i + 1;
 
 
 dbNum = length(DataName);
@@ -47,13 +47,13 @@ for dbIndex = 1:dbNum
                     if (lamda(2) <= lamda(3))  % when lamda(2) <= lamda(3), the result is very bad, so we ignor this condition
                         continue;
                     end                    
-                    result = SRG(X, bnorm, knn, gnd, maxIter, lamda);      %result = [acc, nmi, Pu, ARI, Fscore,Precision,Recall];
+                    result = AGLSR(X, bnorm, knn, gnd, maxIter, lamda);      %result = [acc, nmi, Pu, ARI, Fscore,Precision,Recall];
                     printResult(result, dbnamePre, lamda)
                 end
             end           
     else
         tic;
-       [result] = SRG(X, bnorm, knn, gnd, maxIter, lamda); %result = [acc, nmi, Pu, ARI, Fscore,Precision,Recall];
+       [result] = AGLSR(X, bnorm, knn, gnd, maxIter, lamda); %result = [acc, nmi, Pu, ARI, Fscore,Precision,Recall];
        printResult(result, dbnamePre, lamda)
         
     end    
