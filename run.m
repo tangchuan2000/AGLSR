@@ -3,8 +3,6 @@ addpath(genpath('.'));
 DBDIR = './Dataset/';
 i= 1;
 
-
-
  
 DataName{i} = 'BBCSport'; i = i + 1;
 %DataName{i} = 'BBC'; i = i + 1;
