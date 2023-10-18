@@ -10,6 +10,7 @@
 %
 %   Written by Chuan Tang (tcwebmaster At 163.com)
 %
+%
 function result = AGLSR(X, bNorm, knn, gnd, maxIter, lamda)    
     viewNum = numel(X);
     sampleNum = size(X{1},2);
